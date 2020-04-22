@@ -14,15 +14,16 @@ const sortBy = require('sort-array');
     for (let i = 0; i < length; ++i) {
         EvaluatedHand.push(new PokerHand(AllCombinations[i].join().replace(/\,/ig, " "))); //join = tostring() // replacing "," to " " and i = ignore case sensitive, g = global
     }
-    let scores = sortBy(EvaluatedHand, 'score');
+    //let scores = sortBy(EvaluatedHand, 'score');
+    let scores = sortBy(EvaluatedHand  , {by: 'score',  order: 'asc' });
    /* console.log("----------------");
     for(let i =0;i<scores.length;++i){
         console.log(scores[i]);
     }
     console.log("----------------");*/
-    let bestScore = scores[scores.length - 1];//[0] will return the best score
+    let bestScore = scores[0];//[0] will return the best score
     return bestScore;
-}
+ }
 
 const express = require('express');
 const app = express();
