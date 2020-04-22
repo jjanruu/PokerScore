@@ -20,7 +20,7 @@ const sortBy = require('sort-array');
         console.log(scores[i]);
     }
     console.log("----------------");*/
-    let bestScore = scores[0];//[0] will return the best score
+    let bestScore = scores[scores.length - 1];//[0] will return the best score
     return bestScore;
 }
 
