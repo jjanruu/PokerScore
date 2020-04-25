@@ -40,7 +40,7 @@ app.use(function(req, res, next) {
     for (let i = 0; i < length; ++i) {
         EvaluatedHand.push(new PokerHand(AllCombinations[i].join().replace(/\,/ig, " "))); //join = tostring() // replacing "," to " " and i = ignore case sensitive, g = global
     }
-    let scores = sortBy(EvaluatedHand, 'score');
+    //let scores = sortBy(EvaluatedHand, 'score');
    /* console.log("----------------");
     for(let i =0;i<scores.length;++i){
         console.log(scores[i]);
