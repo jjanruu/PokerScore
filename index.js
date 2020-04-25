@@ -46,6 +46,7 @@ app.use(function(req, res, next) {
         console.log(scores[i]);
     }
     console.log("----------------");*/
+    let scores = sortBy(EvaluatedHand  , {by: 'score',  order: 'asc' });
     let bestScore = scores[0];//[0] will return the best score
     return bestScore;
 }
